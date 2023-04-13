@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+
+body {
+  /* font-family: "Schibsted Grotesk", sans-serif; */
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  background-color: rgb(42, 42, 42);
+
+  color: rgb(244, 244, 244);
+  width: 300px;
+  height: 500px;
+}
+#tip {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  font-size: 2.5rem;
+}
+
+header img {
+  display: inline-block;
+  width: 30px;
+  margin-right: 5px;
+}
+
+#ShowColorElement {
+  background-color: rgb(255, 255, 255);
+  height: 200px;
+
+  color: rgb(4, 4, 4);
+  overflow-y: scroll;
+}
+
+.colorLines {
+  padding: 4px;
+}
+
+.colorLines div {
+  display: inline-block;
+
+  margin-right: 8px;
+}
+
+.colorTiles {
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid black;
+}
+
+.selectedElement {
+  background-color: rgb(148, 212, 241);
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  background-color: darkgrey;
+  color: rgb(252, 254, 255);
+  border: 2px solid rgb(109, 109, 109);
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(85, 176, 91);
+}
+
+#getColorButton {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+}
+
+#getColorButton img {
+  height: 80%;
+}
+
+#getCssButton {
+  width: 49%;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#getScssButton {
+  width: 49%;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#copyColorButton {
+  width: 49%;
+  height: 25px;
+  border-radius: 6px;
+}
+#deleteColorButton {
+  width: 49%;
+  height: 25px;
+  border-radius: 6px;
+  background-color: rgb(147, 18, 18);
+}
+
+#deleteColorButton:hover {
+  background-color: rgb(236, 56, 56);
+}
