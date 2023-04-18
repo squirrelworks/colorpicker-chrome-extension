@@ -19,6 +19,9 @@ getCssButton.addEventListener('click', createCssVars);
 getScssButton.addEventListener('click', createScssVars);
 
 
+const clearColorSetButton = document.getElementById('clearColorSet');
+
+clearColorSetButton.addEventListener('click', deleteMe);
 
 
 
@@ -230,7 +233,8 @@ function storeMe() {
 
 function deleteMe() {
     localStorage.removeItem('lastPalette');
-
+    colorList = [];
+    showColors();
 }
 
 

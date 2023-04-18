@@ -33,6 +33,10 @@ header img {
   margin-right: 5px;
 }
 
+#colorListSection h3 {
+  display: inline-block;
+}
+
 #ShowColorElement {
   background-color: rgb(255, 255, 255);
   height: 200px;
@@ -75,6 +79,11 @@ button {
 
 button:hover {
   background-color: rgb(85, 176, 91);
+}
+
+#clearColorSet {
+  display: inline;
+  border-radius: 5px;
 }
 
 #getColorButton {
