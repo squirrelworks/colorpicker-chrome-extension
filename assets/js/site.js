@@ -44,12 +44,6 @@ document.addEventListener('keypress', event => {
 
 })
 
-
-
-
-
-
-
 getColorButton.addEventListener('click', openEyeDropper);
 
 function openEyeDropper() {
@@ -233,6 +227,11 @@ function deleteMe() {
     localStorage.removeItem('lastPalette');
     colorList = [];
     showColors();
+}
+
+
+function setupColorWheel() {
+
 }
 
 
