@@ -8,36 +8,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/site.css">
-    <script src="assets/js/site.js" defer></script>
+    <!-- <script src="assets/js/site.js" defer></script> -->
+    <script src="assets/js/site.js" type="module"></script>
+
 </head>
 
 <body>
     <header>
         <h1>Color Picker</h1>
     </header>
+    <section id="myApp"></section>
 
-    <button id="getColorButton"><img src="assets/img/icon-white.svg"></button>
-    <p id="tip">Click here or Shift+S for sample color.</p>
-
-    <section id="colorListSection">
-
-        <h3>Color set</h3> <button id="clearColorSet">new</button>
-
-        <p id="ShowColorElement">Select some colors</p>
-
-        <section id="colorListTools" class="hidden">
-            <button id="copyColorButton">Copy</button>
-            <button id="deleteColorButton">Delete</button>
-        </section>
-
-    </section>
-
-    <section id="functions">
-        <h3>Copy color set</h3>
-        <button id="getCssButton">As CSS</button>
-        <button id="getScssButton">As SCSS</button>
-
-    </section>
 
     <footer>
         <p class="smallWriting">Created by: Bo Nicolaisen</p>

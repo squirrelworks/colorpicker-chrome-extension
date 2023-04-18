@@ -110,12 +110,18 @@ button:hover {
   border-radius: 10px;
 }
 
+#colorListTools {
+  display: inline;
+}
+
 #copyColorButton {
+  display: inline;
   width: 49%;
   height: 25px;
   border-radius: 6px;
 }
 #deleteColorButton {
+  display: inline;
   width: 49%;
   height: 25px;
   border-radius: 6px;
@@ -129,30 +135,3 @@ button:hover {
 .smallWriting {
   font-size: 0.2;
 }
-
-
-const convertHexToRgba = (hexColor, opacity = 1) => {
-  // Remove the "#" symbol if present
-  if (hexColor.charAt(0) === '#') {
-    hexColor = hexColor.slice(1);
-  }
-
-  // Check if the input is a valid hexadecimal color
-  const hexRegex = /^[0-9A-Fa-f]{6}$/g;
-  if (!hexRegex.test(hexColor)) {
-    throw new Error('Invalid hexadecimal color');
-  }
-
-  // Convert the hexadecimal color to RGBA
-  const r = parseInt(hexColor.slice(0, 2), 16);
-  const g = parseInt(hexColor.slice(2, 4), 16);
-  const b = parseInt(hexColor.slice(4, 6), 16);
-  
-  // Return the RGBA value as a string
-  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-};
-
-//Usage example
-const hexColor = '#FFA500';
-const rgbaColor = convertHexToRgba(hexColor, 0.5);
-console.log(rgbaColor); // Outputs: "rgba(255, 165, 0, 0.5)"
