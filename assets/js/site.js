@@ -24,8 +24,6 @@ const clearColorSetButton = document.getElementById('clearColorSet');
 clearColorSetButton.addEventListener('click', deleteMe);
 
 
-
-
 let colorList = [];
 let selectedColorLine = false;
 
