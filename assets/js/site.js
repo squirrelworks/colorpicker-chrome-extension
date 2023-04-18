@@ -1,14 +1,15 @@
+
+
+
 const eyeDropper = new EyeDropper();
 const getColorButton = document.getElementById('getColorButton');
 const ShowColorListElement = document.getElementById('ShowColorElement');
-
-
 
 const colorListTools = document.getElementById('colorListTools');
 const copyColorButton = document.getElementById('copyColorButton');
 const deleteColorButton = document.getElementById('deleteColorButton');
 
-copyColorButton.addEventListener('click', copyColors);
+copyColorButton?.addEventListener('click', copyColors);
 deleteColorButton.addEventListener('click', deleteColor);
 
 
@@ -17,7 +18,6 @@ const getScssButton = document.getElementById('getScssButton');
 
 getCssButton.addEventListener('click', createCssVars);
 getScssButton.addEventListener('click', createScssVars);
-
 
 const clearColorSetButton = document.getElementById('clearColorSet');
 
