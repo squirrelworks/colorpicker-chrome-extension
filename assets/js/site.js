@@ -26,6 +26,11 @@ getScssButton.addEventListener('click', createScssVars);
 let colorList = [];
 let selectedColorLine = false;
 
+initApp();
+
+function initApp() {
+    getPalette();
+}
 
 
 document.addEventListener('keypress', event => {
@@ -53,6 +58,7 @@ function openEyeDropper() {
         console.log(selectedColor) // { sRGBHex: '#008080' }
 
         colorList.push(selectedColor.sRGBHex);
+        storeMe();
         showColors();
 
 
@@ -164,27 +170,67 @@ function createScssVars() {
         myScssText += myScssVar;
     });
 
-    
+
     navigator.clipboard.writeText(myScssText);
     console.log(myScssText);
 }
 
 
-function copyColors(event){
+function copyColors(event) {
 
-    let myColor=selectedColorLine.dataset.colorValue;
+    let myColor = selectedColorLine.dataset.colorValue;
     navigator.clipboard.writeText(myColor);
 }
 
 
 
-function deleteColor(event){
+function deleteColor(event) {
 
     console.log(colorList);
-    let myIndex=selectedColorLine.dataset.index;
-    colorList.splice(myIndex,1);
+    let myIndex = selectedColorLine.dataset.index;
+    colorList.splice(myIndex, 1);
+    storeMe();
     showColors();
     console.log(colorList);
+}
+
+
+/* local storage */
+
+
+
+function store(myItem) {
+    console.log(myInput);
+    myColorSets.push(myInput.value);
+
+    storeMe();
+}
+
+
+function getPalette() {
+
+    colorList = JSON.parse(localStorage.getItem('lastPalette'));
+
+    if (colorList) {
+        console.log(colorList);
+    } else {
+        console.log('no color set in local storage');
+        colorList = [];
+    }
+
+    showColors();
+
+}
+
+function storeMe() {
+    //console.log('store', colorList);
+    localStorage.setItem('lastPalette', JSON.stringify(colorList));
+
+}
+
+function deleteMe() {
+    localStorage.removeItem('lastPalette');
+
 }
 
 
